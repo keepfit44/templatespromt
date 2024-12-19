@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Prompt templates for AI - templatesprompt.com">
+  <meta charset="UTF-8">
+  <meta name="description" content="TemplatesPrompt - Prompts for QA, Testing and more.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>templatesprompt - Home</title>
+  <title>TemplatesPrompt - Home</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+<div class="wrapper">
   <header>
-    
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="TemplatesPrompt Logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="categories/index.html">Categories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
-    <h1>Welcome to templatesprompt</h1>
-    <div style="text-align: center; margin-top: 20%;">
-        <h1>Coming Soon</h1>
-        <p>Our website is under construction. Stay tuned for exciting updates!</p>
-      </div>
+    <h1>Welcome to TemplatesPrompt</h1>
+    <p>Your go-to source for curated QA Testing prompts.</p>
+
+    <section class="featured-prompts">
+      <h2>Featured QA Prompts</h2>
+      <ul>
+        <li>
+          <h3>Prompt #1: Comprehensive Test Cases for Login</h3>
+          <section class="featured-prompt">
+            <h2>Copy this Prompt:</h2>
+            <pre><code class="markdown">
+  # QA Assistant Prompt
+
+  You are an experienced QA Assistant. Review the following specifications for a login functionality and help generate an exhaustive list of test cases. Include functional, boundary, negative, and security tests.
+
+  **Specifications:**
+  - The user inputs a valid email address and a password to log in.
+  - The password must be at least 8 characters long and contain both letters and numbers.
+  - If the user enters incorrect credentials three times, the system locks the account for 15 minutes.
+  - The application uses an additional captcha if it detects multiple failed attempts in a short period.
+
+  **Test Case Requirements:**
+  - Must include front-end and back-end validations.
+  - Include stress tests for multiple failed attempts.
+  - Each test case should describe:
+    - Objective
+    - Steps to reproduce
+    - Test data
+    - Expected result
+
+  Provide the test cases in a clear table or numbered list, including both positive and negative scenarios.
+    </code></pre>
+          </section>
+
+          <a href="categories/index.html">See More</a>
+        </li>
+      </ul>
+    </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 templatesprompt.com</p>
+      <p>&copy; 2025 TemplatesPrompt.com</p>
     </div>
   </footer>
+</div>
 </body>
 </html>

@@ -1,25 +1,56 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensures the page covers the full viewport height */
+/* Reset some basic margins and paddings */
+* {
+  box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/*
+  Use a flex container for the body to push the footer to the bottom when content is short.
+*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header, Main, Footer */
 header, footer {
   background: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+}
+footer {
+  border: none;
+  border-top: 1px solid #ddd;
 }
 
+/* Container for consistent horizontal spacing */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Main expands to fill available space */
+main.container {
+  flex: 1 0 auto;
+  padding: 20px 0;
+}
+
+/* Footer is pushed down due to flex layout */
+footer .container {
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Logo and Navigation */
 .logo img {
   height: 40px;
   vertical-align: middle;
@@ -28,8 +59,8 @@ header, footer {
 nav ul {
   list-style: none;
   padding: 0;
-  float: right;
   margin: 0;
+  float: right;
 }
 
 nav ul li {
@@ -41,72 +72,114 @@ nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
+  position: relative;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: #007acc;
 }
 
+/* Clear floats in header container */
+header .container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Headings and sections */
 h1, h2, h3 {
+  margin-top: 0;
   color: #333;
 }
 
-main {
-  margin: 30px 0;
-  flex: 1; /* Allows the main content to expand and push the footer down */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center; /* Centers the text */
-}
-
-.featured-prompts ul {
+/* Featured prompts list or other lists */
+.featured-prompts ul, .categories-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.featured-prompts ul li {
+.featured-prompts ul li,
+.categories-list li {
   background: #fff;
-  margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 
-.featured-prompts h3 {
-  margin-top: 0;
+.featured-prompt {
+  background: #f4f4f4;
+  padding: 20px;
+  border-left: 5px solid #007acc;
+  margin: 20px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.featured-prompt pre {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+}
+
+.featured-prompt h2 {
+  color: #007acc;
+  margin-bottom: 10px;
+}
+
+
+/* Contact Form */
+form {
+  margin-top: 20px;
 }
 
 form label {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 form button {
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 10px 20px;
   background: #007acc;
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 form button:hover {
   background: #005fa3;
 }
 
-footer p {
-  text-align: center;
-  margin: 0;
-  padding: 10px 0;
-  background: #fff;
-  border-top: 1px solid #ddd;
+/* Responsive: small screens */
+@media (max-width: 768px) {
+  nav ul {
+    float: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .logo, nav ul {
+    display: block;
+    text-align: center;
+  }
+  .logo img {
+    margin: 10px 0;
+  }
 }
