@@ -121,6 +121,11 @@ h1, h2, h3 {
   padding: 15px;
   border: 1px solid #ddd;
   overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+  line-height: 1.3;
+  font-size: 15px;
 }
 
 .featured-prompt h2 {
@@ -182,4 +187,8 @@ form button:hover {
   .logo img {
     margin: 10px 0;
   }
+  .featured-prompt pre {
+      font-size: 14px;
+      padding: 10px;
+    }
 }

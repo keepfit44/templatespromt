@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="TemplatesPrompt - Prompts for QA, Testing and more.">
+  <!-- Basic SEO meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TemplatesPrompt - Home</title>
+
+  <!-- Primary Meta Tags -->
+  <title>TemplatesPrompt - QA Testing Prompts and More</title>
+  <meta name="description" content="TemplatesPrompt is your go-to source for curated QA testing prompts. Discover comprehensive test plans and contribute your own prompts to our growing community.">
+
+  <!-- Optional: meta keywords (less relevant for modern SEO, but sometimes still used) -->
+  <meta name="keywords" content="QA testing prompts, software testing, test cases, test plans, login security, e-commerce checkout, prompt engineering">
+
+  <!-- Social Sharing (Open Graph) - adjust as needed -->
+  <meta property="og:title" content="TemplatesPrompt - QA Testing Prompts and More">
+  <meta property="og:description" content="Discover curated QA testing prompts, share your own, and explore best practices for software test plans.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -31,51 +45,99 @@
     <h1>Welcome to TemplatesPrompt</h1>
     <p>Your go-to source for curated QA Testing prompts.</p>
 
+    <!-- Collaboration Button / Link -->
+    <div class="contribute-button" style="margin: 20px 0;">
+      <p>Want to share your own prompt? Help our community grow!</p>
+      <a href="https://forms.gle/Xg5mc1ScW5vLamNk7" target="_blank" rel="noopener"
+         style="display: inline-block; padding: 10px 20px; background: #007acc; color: #fff; text-decoration: none; border-radius: 4px;">
+        Contribute a Prompt
+      </a>
+    </div>
+
     <section class="featured-prompts">
       <h2>Featured QA Prompts</h2>
       <ul>
+        <!-- Prompt #1 -->
         <li>
           <h3>Prompt #1: Comprehensive Test Cases for Login</h3>
           <section class="featured-prompt">
             <h2>Copy or edit this Prompt to adapt your needs:</h2>
-            <pre>
-              <code class="markdown">
-            # QA Prompt
+            <pre><code class="markdown">
+# QA Prompt
 
-          You are an experienced Software Quality Engineer.
-          Your task is to design a **Test Plan** for the following login functionality, then derive an exhaustive set of **test cases**. Please address functional, boundary, negative, security, and stress scenarios.
+You are an experienced Software Quality Engineer.
+Your task is to design a **Test Plan** for the following login functionality, then derive an exhaustive set of **test cases**. Please address functional, boundary, negative, security, and stress scenarios.
 
-          **1. Scope & Objectives**
-          - Describe the overall goal: ensuring the login flow meets functional requirements, is secure, and prevents unauthorized access.
-          - Outline the key areas of testing (e.g., validation, security checks, error handling).
+**1. Scope & Objectives**
+- Describe the overall goal: ensuring the login flow meets functional requirements, is secure, and prevents unauthorized access.
+- Outline the key areas of testing (e.g., validation, security checks, error handling).
 
-          **2. Specifications**
-          - The user enters a valid email address and password to log in.
-          - The password must be at least 8 characters long and contain both letters and numbers.
-          - If the user enters incorrect credentials three times, the system locks the account for 24 hours.
-          - A captcha is triggered if multiple failed attempts occur in a short period.
+**2. Specifications**
+- The user enters a valid email address and password to log in.
+- The password must be at least 8 characters long and contain both letters and numbers.
+- If the user enters incorrect credentials three times, the system locks the account for 24 hours.
+- A captcha is triggered if multiple failed attempts occur in a short period.
 
-          **3. Test Plan Requirements**
-          1. **Test Approach**: Detail the types of tests (functional, boundary, negative, security, performance/stress).
-          2. **Resources & Environments**: Specify browsers, OS, test data sources, etc.
-          3. **Timeline & Milestones** (optional, if relevant).
+**3. Test Plan Requirements**
+1. **Test Approach**: Detail the types of tests (functional, boundary, negative, security, performance/stress).
+2. **Resources & Environments**: Specify browsers, OS, test data sources, etc.
+3. **Timeline & Milestones** (optional, if relevant).
 
-          **4. Test Case Requirements**
-          - Must include front-end and back-end validations (e.g., form field checks, API responses).
-          - Cover stress tests for multiple failed attempts and account lockout.
-          - Each test case should describe:
-            - **Objective** (what are we validating?)
-            - **Steps to reproduce** (step-by-step actions)
-            - **Test data** (valid/invalid credentials, boundary conditions, etc.)
-            - **Expected result** (desired outcome or error message)
+**4. Test Case Requirements**
+- Must include front-end and back-end validations (e.g., form field checks, API responses).
+- Cover stress tests for multiple failed attempts and account lockout.
+- Each test case should describe:
+  - **Objective** (what are we validating?)
+  - **Steps to reproduce** (step-by-step actions)
+  - **Test data** (valid/invalid credentials, boundary conditions, etc.)
+  - **Expected result** (desired outcome or error message)
 
-          **5. Output Format**
-          1. First, provide a high-level **Test Plan** (including Scope, Approach, Resources, and any relevant risk or assumption).
-          2. Then, present the **Test Cases** in a clear table or numbered list, ensuring you include both **positive** and **negative** scenarios.
-          3. Conclude with any recommendations or additional observations for improvement.
+**5. Output Format**
+1. First, provide a high-level **Test Plan** (including Scope, Approach, Resources, and any relevant risk or assumption).
+2. Then, present the **Test Cases** in a clear table or numbered list, ensuring you include both **positive** and **negative** scenarios.
+3. Conclude with any recommendations or additional observations for improvement.
+            </code></pre>
+          </section>
+          <a href="categories/index.html">See More Prompts</a>
+        </li>
 
-       </code>
-   </pre>
+        <!-- Prompt #2 (New Featured Prompt) -->
+        <li>
+          <h3>Prompt #2: E-commerce Checkout Flow</h3>
+          <section class="featured-prompt">
+            <h2>Copy or edit this Prompt for your test needs:</h2>
+            <pre><code class="markdown">
+# E-commerce Checkout QA Prompt
+
+You are a seasoned Software Quality Engineer. Your mission is to plan and execute comprehensive testing on the **checkout flow** of a multi-currency e-commerce application.
+
+**1. Scope & Objectives**
+- Validate adding products to the cart, applying discounts or coupons, and checking out in various currencies.
+- Ensure accurate calculation of taxes and shipping costs.
+
+**2. Specifications**
+- The store supports multiple currencies (USD, EUR, GBP).
+- Users can apply discount codes (e.g., SUMMER20) for 20% off.
+- Tax and shipping are calculated based on location and shipping method (Standard, Express).
+- Payment gateway integrated with Stripe for credit/debit cards.
+
+**3. Test Plan Requirements**
+1. **Test Approach**: Include functional, boundary/negative, security, and performance testing for the checkout process.
+2. **Resources & Environments**: Indicate browsers, OS, and test data.
+3. **Timeline**: (Optional, if relevant).
+
+**4. Test Case Requirements**
+- Each test case should describe:
+  - **Objective** (what are we validating?)
+  - **Steps to reproduce** (e.g., add items, apply coupon, select shipping)
+  - **Test data** (coupon codes, address details, payment info)
+  - **Expected result** (correct totals, successful payment, order confirmation)
+
+**5. Output Format**
+1. Provide a high-level **Test Plan** describing scope, approach, resources.
+2. Then list **Test Cases** in a clear table or numbered format (positive + negative).
+3. Summarize any risks, performance considerations, or recommendations.
+            </code></pre>
           </section>
           <a href="categories/index.html">See More Prompts</a>
         </li>
