@@ -1,29 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Prompt templates for AI - templatesprompt.com">
+  <meta charset="UTF-8">
+  <meta name="description" content="TemplatesPrompt - Prompts for QA, Testing and more.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>templatesprompt - Home</title>
+  <title>TemplatesPrompt - Home</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+<div class="wrapper">
   <header>
-    
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/logo.png" alt="TemplatesPrompt Logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="categories/index.html">Categories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
-    <h1>Welcome to templatesprompt</h1>
-    <div style="text-align: center; margin-top: 20%;">
-        <h1>Coming Soon</h1>
-        <p>Our website is under construction. Stay tuned for exciting updates!</p>
-      </div>
+    <h1>Welcome to TemplatesPrompt</h1>
+    <p>Your go-to source for curated QA Testing prompts.</p>
+
+    <section class="featured-prompts">
+      <h2>Featured QA Prompts</h2>
+      <ul>
+        <li>
+          <h3>Prompt #1: Comprehensive Test Cases for Login</h3>
+          <section class="featured-prompt">
+            <h2>Copy or edit this Prompt to adapt your needs:</h2>
+            <pre>
+              <code class="markdown">
+            # QA Prompt
+
+          You are an experienced Software Quality Engineer.
+          Your task is to design a **Test Plan** for the following login functionality, then derive an exhaustive set of **test cases**. Please address functional, boundary, negative, security, and stress scenarios.
+
+          **1. Scope & Objectives**
+          - Describe the overall goal: ensuring the login flow meets functional requirements, is secure, and prevents unauthorized access.
+          - Outline the key areas of testing (e.g., validation, security checks, error handling).
+
+          **2. Specifications**
+          - The user enters a valid email address and password to log in.
+          - The password must be at least 8 characters long and contain both letters and numbers.
+          - If the user enters incorrect credentials three times, the system locks the account for 24 hours.
+          - A captcha is triggered if multiple failed attempts occur in a short period.
+
+          **3. Test Plan Requirements**
+          1. **Test Approach**: Detail the types of tests (functional, boundary, negative, security, performance/stress).
+          2. **Resources & Environments**: Specify browsers, OS, test data sources, etc.
+          3. **Timeline & Milestones** (optional, if relevant).
+
+          **4. Test Case Requirements**
+          - Must include front-end and back-end validations (e.g., form field checks, API responses).
+          - Cover stress tests for multiple failed attempts and account lockout.
+          - Each test case should describe:
+            - **Objective** (what are we validating?)
+            - **Steps to reproduce** (step-by-step actions)
+            - **Test data** (valid/invalid credentials, boundary conditions, etc.)
+            - **Expected result** (desired outcome or error message)
+
+          **5. Output Format**
+          1. First, provide a high-level **Test Plan** (including Scope, Approach, Resources, and any relevant risk or assumption).
+          2. Then, present the **Test Cases** in a clear table or numbered list, ensuring you include both **positive** and **negative** scenarios.
+          3. Conclude with any recommendations or additional observations for improvement.
+
+       </code>
+   </pre>
+          </section>
+          <a href="categories/index.html">See More Prompts</a>
+        </li>
+      </ul>
+    </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 templatesprompt.com</p>
+      <p>&copy; 2025 TemplatesPrompt.com</p>
     </div>
   </footer>
+</div>
 </body>
 </html>
