@@ -191,4 +191,21 @@ form button:hover {
       font-size: 14px;
       padding: 10px;
     }
+  details {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  details summary {
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+  }
+  details[open] {
+    background: #fdfdfd;
+    border-color: #ccc;
+  }
+
 }

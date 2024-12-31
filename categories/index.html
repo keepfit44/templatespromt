@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Categories - templatesprompt">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Categories - templatesprompt</title>
+  <title>Prompt Categories | TemplatesPrompt</title>
+  <meta name="description" content="Explore various prompt categories for QA testing, REST API scenarios, e-commerce flows, and more on TemplatesPrompt.">
+
+  <!-- Social Sharing (Open Graph) -->
+  <meta property="og:title" content="Prompt Categories | TemplatesPrompt">
+  <meta property="og:description" content="Find QA testing prompts, e-commerce, REST APIs, and more. Contribute your own prompts to our community.">
+  <meta property="og:image" content="../assets/img/logo.png">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
@@ -12,7 +19,7 @@
   <header>
     <div class="container">
       <a href="../index.html" class="logo">
-        <img src="../assets/img/logo.png" alt="templatesprompt logo" />
+        <img src="../assets/img/logo.png" alt="TemplatesPrompt Logo" />
       </a>
       <nav>
         <ul>
@@ -27,15 +34,107 @@
 
   <main class="container">
     <h1>Prompt Categories</h1>
-    <ul>
-      <li><a href="#">QA and Testing</a></li>
-      <!-- Add more categories as you expand -->
+    <p>
+      Browse our curated categories to find specialized prompts for different testing scenarios.
+      From e-commerce flows to REST API validations, we've got you covered.
+      Contribute your own and help our community grow!
+    </p>
+
+    <!-- Category List -->
+    <ul class="category-list">
+      <li><a href="#ecommerce">E-commerce Testing</a></li>
+      <li><a href="#restapi">REST API Testing</a></li>
+      <!-- Add more categories or link to specific pages as you expand -->
     </ul>
+
+    <!-- E-commerce Prompt -->
+    <section id="ecommerce">
+      <h2>E-commerce Checkout Flow Prompt</h2>
+      <div class="featured-prompt">
+        <pre><code class="markdown">
+# E-commerce Checkout QA Prompt
+
+You are a seasoned Software Quality Engineer. Your mission is to plan and execute comprehensive testing on the **checkout flow** of a multi-currency e-commerce application.
+
+**1. Scope & Objectives**
+- Validate adding products to the cart, applying discounts or coupons, and checking out in various currencies.
+- Ensure accurate calculation of taxes and shipping costs.
+
+**2. Specifications**
+- The store supports multiple currencies (USD, EUR, GBP).
+- Users can apply discount codes (e.g., SUMMER20) for 20% off.
+- Tax and shipping are calculated based on location and shipping method (Standard, Express).
+- Payment gateway integrated with Stripe for credit/debit cards.
+
+**3. Test Plan Requirements**
+1. **Test Approach**: Include functional, boundary/negative, security, and performance testing for the checkout process.
+2. **Resources & Environments**: Indicate browsers, OS, and test data.
+3. **Timeline**: (Optional, if relevant).
+
+**4. Test Case Requirements**
+- Each test case should describe:
+  - **Objective** (what are we validating?)
+  - **Steps to reproduce** (e.g., add items, apply coupon, select shipping)
+  - **Test data** (coupon codes, address details, payment info)
+  - **Expected result** (correct totals, successful payment, order confirmation)
+
+**5. Output Format**
+1. Provide a high-level **Test Plan** describing scope, approach, resources.
+2. Then list **Test Cases** in a clear table or numbered format (positive + negative).
+3. Summarize any risks, performance considerations, or recommendations.
+       </code></pre>
+      </div>
+    </section>
+
+    <!-- REST API Prompt -->
+    <section id="restapi">
+      <h2>REST API Testing Prompt</h2>
+      <div class="featured-prompt">
+        <pre><code class="markdown">
+# REST API Testing Prompt
+
+You are an experienced QA Engineer tasked with designing comprehensive tests for a REST API.
+Use tools like Postman or similar, and ensure you cover both functional and security aspects.
+
+**1. Scope & Objectives**
+- Validate the API endpoints for correctness, performance, and security.
+- Ensure that status codes, headers, and responses adhere to the specification.
+
+**2. Specifications**
+- The API includes endpoints for creating, reading, updating, and deleting resources (CRUD).
+- Each endpoint requires OAuth 2.0 authentication.
+- Rate limiting is implemented: a maximum of 100 requests per minute is allowed.
+- The API returns JSON responses with relevant error messages.
+
+**3. Test Plan Requirements**
+1. **Endpoint Coverage**:
+   - Verify all CRUD operations (GET, POST, PUT/PATCH, DELETE).
+   - Include boundary checks on request payloads (e.g., large inputs, missing fields).
+2. **Security & Auth**:
+   - Test unauthorized requests (missing or invalid tokens).
+   - Ensure tokens expire and cannot be reused maliciously.
+3. **Performance**:
+   - Stress test with multiple concurrent requests to confirm rate limiting.
+   - Measure response times under normal and peak loads.
+
+**4. Test Case Requirements**
+- For each endpoint, describe:
+  - **Objective** (e.g., verify successful resource creation)
+  - **Steps to reproduce** (API method, endpoint URL, sample request body)
+  - **Expected result** (HTTP status code, response structure, success/failure message)
+
+**5. Output Format**
+1. Provide a high-level **Test Plan** describing your approach, tools (Postman, Newman CLI, etc.), and any environment setup.
+2. List **Test Cases** in a structured format (table or numbered list), covering valid/invalid scenarios, boundary cases, and security checks.
+3. Summarize any improvements, potential risks, or best practices for ongoing API maintenance.
+       </code></pre>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 templatesprompt.com</p>
+      <p>&copy; 2025 TemplatesPrompt.com</p>
     </div>
   </footer>
 </div>
